@@ -48,7 +48,7 @@
             $('#clients-table').DataTable({
                 processing: true,
                 serverSide: true,
-//                bFilter: false,
+                bFilter: true,
                 ajax: '{!! route('ajax.clients.index') !!}',
                     columns: [
                 { data: 'id' },
@@ -58,7 +58,7 @@
 
                 {
                     data: null,
-                    "searchable": true,
+                    "searchable": false,
                     "orderable": true,
                     render: function( data, type, row ) {
                         return  '<a href="' + data.edit + '" class="btn blue btn-xs">Edit</a>' +
